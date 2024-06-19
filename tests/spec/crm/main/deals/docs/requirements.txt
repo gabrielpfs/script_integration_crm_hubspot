@@ -1,0 +1,5 @@
+python 3.12.3
+requests
+json
+hubspot api_key
+hubspot access_token

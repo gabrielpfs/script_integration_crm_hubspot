@@ -1,0 +1,6 @@
+python 3.12.3
+urllib
+hubspot
+hubspot.utils.oauth
+pytest 8.2.2
+pip install hubspot-api-client

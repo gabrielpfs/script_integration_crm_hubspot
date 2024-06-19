@@ -1,0 +1,9 @@
+If the version of a code to access deals via API does not work
+
+or getting the following error: SyntaxError: You must include a hapi_key or access_token attribute when initalizing the API
+
+update the package using: 
+
+```
+pip install --upgrade hubspot-api-client
+```

@@ -1,0 +1,5 @@
+python 3.12.3
+hubspot api_key
+hubspot access_token
+hubspot-api-client
+pytest 6.2.5
