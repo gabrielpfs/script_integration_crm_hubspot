@@ -1,70 +1,160 @@
 # Contributing
-To contribute, fork this repository and create a new branch. Then create a PR.
 
-For more detailed instructions, see this [GitHub Contributing](https://www.dataschool.io/how-to-contribute-on-github/).
+We would ❤️ it if you contributed to the project and helped make Application even better. We will make sure that contributing to Amplication is easy, enjoyable, and educational for anyone and everyone. All contributions are welcome, including features, issues, documentation, guides, and more.
 
-## Setup
+## Got a question?
 
-* Install the dependencies
+You can ask questions, consult with more experienced Application users, and discuss Application-related topics in the our [Discord channel](https:/dataventures/.com/discord).
 
-```bash
-yarn
+## Found a bug?
+
+If you find a bug in the source code, you can help us by [submitting an issue](https://github.com/.../.../issues/new?assignees=&labels=type%3A%20bug&template=bug_report.md&title=) to our GitHub Repository. Even better, you can submit a Pull Request with a fix.
+
+## Missing a feature?
+
+You can request a new feature by [submitting an issue](https://github.com/.../amplication/issues/new?assignees=&labels=type%3A%20feature%20request&template=feature_request.md&title=) to our GitHub Repository.
+
+If you'd like to implement a new feature, it's always good to be in touch with us before you invest time and effort, since not all features can be supported.
+
+- For a Major Feature, first open an issue and outline your proposal. This will let us coordinate efforts, prevent duplication of work, and help you craft the change so that it's successfully integrated into the project.
+- Small Features can be crafted and directly [submitted as a Pull Request](#submit-pr).
+
+## What do you need to know to help?
+
+If you want to help out with a code contribution, our project uses the following stack:
+
+### Server-side
+
+- [Python](https://docs.python.org/3/)
+
+### Client-side
+
+- [Python](https://docs.python.org/3/)
+
+If you don't feel ready to make a code contribution yet, no problem! You can also check out the [documentation issues](https://github.com/.../.../labels/type%3A%20docs).
+
+# <a name="submit-pr"></a> How do I make a code contribution?
+
+## Open to community
+
+You can check all the issues that are open for community contributions. Check [here](https://github.com/.../.../issues?q=is%3Aopen+is%3Aissue+label%3A%22open+to+community%22).
+
+## Good first issues
+
+Are you new to open source contribution? Wondering how contributions work in our project? Here's a quick rundown.
+
+Find an issue that you're interested in addressing, or a feature that you'd like to add.
+You can use [this view](https://github.com/.../.../issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) which helps new contributors find easy gateways into our project.
+
+## Step 1: Make a fork
+
+Fork the Amplication repository to your GitHub organization. This means that you'll have a copy of the repository under _your-GitHub-username/repository-name_.
+
+> :accessibility: Un-check "Copy the DEFAULT branch only"
+
+## Step 2: Clone the repository to your local machine
+
+```sh
+git clone -b next https://github.com/{your-GitHub-username}/integration-crm-hubspot.git
+
 ```
 
-* Bootstrap `lerna`
+## Step 3: Prepare the development environment
 
-In order to manage multiple npm packages in the same Github repos, we use [lerna](https://lerna.js.org/).
+Set up and run the development environment on your local machine following the [README](./README.md#Development)
 
-```bash
-yarn lerna bootstrap
-````
+## Step 4: Create a branch
+Create a new branch for your changes.
+In order to keep branch names uniform and easy-to-understand, please use the following conventions for branch naming.
+Generally speaking, it is a good idea to add a group/type prefix to a branch.
+Here is a list of good examples:
+- for docs change : `docs/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. docs/2233-update-contributing-docs
+- for new features : `feat/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. feat/1144-add-plugins
+- for bug fixes : `fix/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. fix/9878-fix-invite-wrong-url
+- for anything else: `chore/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. chore/111-update-ci-url
 
-* To test a command
-
-First, you will need to create a config for the accounts that you want to be able to test using.
-
-Once the config is created, commands can be run by providing a path to the executable file:
-
-```
-yarn hs upload --account [src] [dest]`
-```
-
-* To test a command when `@hubspot/cli` is a dependency in another package like `cms-theme-boilerplate`.
-
-In order to test changes in another npm package that is using `@hubspot/cli`, [yarn link](https://yarnpkg.com/lang/en/docs/cli/link/) can be used.
-
-```bash
-cd /path/to/other-npm-package
-yarn link @hubspot/cli
+```sh
+git checkout -b branch-name-here
 ```
 
-## Local development with local-dev-lib
-When contributing to hubspot-cli, you may also need to make changes to cli-local-dev-lib. To use a local version of local-dev-lib as a dependancy, use [yarn link](https://classic.yarnpkg.com/lang/en/docs/cli/link/).
-1. Run `yarn local-dev` in `local-dev-lib`
-2. Run `yarn link @hubspot/local-dev-lib` in the hubspot-cli root and again in `packages/cli` to use the symlinked local package.
+## Step 5: Make your changes
 
-To stop using your local `local-dev-lib`, you can follow a similar process with [yarn unlink](https://classic.yarnpkg.com/en/docs/cli/unlink).
+Update the code with your bug fix or new feature.
 
-## Testing
-Ensure you are on the minimum version of Node supported by the CLI before running any tests, since that is the version of node that the build step uses..
+## Step 6: Add the changes that are ready to be committed
 
-Using [nvm](https://github.com/nvm-sh/nvm) to switch between versions will help speed up development.
+Stage the changes that are ready to be committed:
 
-Tests on the CLI are located in two places:
-- `/acceptance-tests/tests`
-- `/packages/cli/lib/__tests__`
-
-The acceptance tests are run using `yarn test-cli`. You will need to do some configuration before being able to run the acceptance tests.
-
-The unit tests are run with `yarn test`. To run a specific test, use `yarn test [unit-test-name]`
-
-Before attempting to merge, make sure you have run the following commands:
-```bash
-node -v # v10.24.1
-yarn test
-yarn test-cli
-yarn check-deps # Should output "No dependency issues found"
+```sh
+git add .
 ```
 
-## Merging
-To merge, either create, or have a maintainer create a blank branch, and set your PRs base branch to the blank branch. Merge your PR into the blank branch, and ensure that it passes the build. Then merge the new branch into main.
+## Step 7: Commit the changes (Git)
+
+Commit the changes with a short message. (See below for more details on how we structure our commit messages)
+
+```sh
+git commit -m "<type>(<package>): <subject>"
+```
+
+## Step 8: Push the changes to the remote repository
+
+Push the changes to the remote repository using:
+
+```sh
+git push origin branch-name-here
+```
+
+## Step 9: Create Pull Request
+
+In GitHub, do the following to submit a pull request to the upstream repository:
+
+1.  Give the pull request a title and a short description of the changes made following the template. Include also the issue or bug number associated with your change. Explain the changes that you made, any issues you think exist with the pull request you made, and any questions you have for the maintainer.  <br/> ⚠️ **Make sure your pull request target the `next` branch.**
+ 
+  > Pull request title should be in the form of `<type>(<package>): <subject>` as per commit messages.
+Remember, it's okay if your pull request is not perfect (no pull request ever is). The reviewer will be able to help you fix any problems and improve it!
+
+2.  Wait for the pull request to be reviewed by a maintainer.
+
+3.  Make changes to the pull request if the reviewing maintainer recommends them.
+
+Celebrate your success after your pull request is merged :-)
+
+## Git Commit Messages
+
+We structure our commit messages like this:
+
+```
+<type>(<package>): <subject>
+```
+
+Example
+
+```
+fix(server): missing entity on init
+```
+
+### Types:
+
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Changes to the documentation
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc.)
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **perf**: A code change that improves performance
+- **test**: Adding missing or correcting existing tests
+- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+### Packages:
+
+- **server**
+- **client**
+- **data-service-gen**
+
+## Code of conduct
+
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
+[Code of Conduct](https://github.com/HubSpot/hubspot-api-python/blob/master/CODE_OF_CONDUCT.md)
+
+Our Code of Conduct means that you are responsible for treating everyone on the project with respect and courtesy.

@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <img src="python_integration.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>MHubSpot Integration</b></h3>
+  <h3><b>HubSpot Integration</b></h3>
 
 </div>
 
@@ -60,7 +60,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# [HubSpot Integration] <a name="about-project"></a>
+# HubSpot Integration <a name="about-project"></a>
 
 > This project is a Python script that interacts with the HubSpot CRM to fetch contact data, process it, and export it in JSON, CSV, and Excel formats. Additionally, it has functionality to send an email notification using the SMTP protocol.
 
@@ -108,9 +108,9 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-- **[Automated_Data_Fetching_from_HubSpot]**
-- **[Data_Export_in_Multiple_Formats]**
-- **[Automated_Email_Notifications]**
+- **Automated_Data_Fetching_from_HubSpot**
+- **Data_Export_in_Multiple_Formats**
+- **Automated_Email_Notifications**
 
 > The application utilizes the HubSpot API to automatically fetch contact data. By specifying the desired contact properties, the application can retrieve comprehensive information about contacts stored in the HubSpot CRM. The data is fetched in a paginated manner, ensuring that even large datasets are handled efficiently without manual intervention.
 

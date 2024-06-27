@@ -1,17 +1,16 @@
 import requests
 import json
-import pandas as pd # pandas utilizado para manipulacao de dados de dataframes # Openpyxl utilizado por pandas para exportar dataframes em arquivos excel
-# pip install pandas openpyxl # Instalar a biblioteca pandas e openpyxl (necessária para escrever arquivos Excel)
-import time # The time library is a module in Python provides functions for handling time-related tasks.
+import pandas as pd
+import time
 import smtplib
 import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-# My Private HubSpot Access Token - Seu token de acesso privado do HubSpot
+# The Private HubSpot Access Token of HubSpot
 access_token = 'your_access_token'
 
-# HubSpot API endpoint URL for contacts - URL do endpoint da API do HubSpot para contatos
+# HubSpot API endpoint URL for contacts
 url = 'https://api.hubapi.com/crm/v3/objects/contacts'
 
 headers = {
@@ -55,7 +54,7 @@ def get_all_contacts(url, headers, properties):
         print("Searching for more contacts (pagging) or Requesting data from API:")
         params = {
             'properties': properties_param,
-            'limit': 100  # You can adjust the limit as needed - Você pode ajustar o limite conforme necessário
+            'limit': 100  # You can adjust the limit as needed
         }
         if after:
             params['after'] = after
@@ -65,7 +64,7 @@ def get_all_contacts(url, headers, properties):
 
         contacts.extend(response_data.get('results', []))
 
-        # Check if there are more pages - Verifica se há mais páginas
+        # Check if there are more pages
         paging = response_data.get('paging')
         if paging and 'next' in paging:
             after = paging['next']['after']
@@ -139,24 +138,24 @@ def send_email():
         server.quit()
 
 print("Fetching all contacts or Starting the Script")
-def main (): # Definicao da Funcao 'main()': A funcao main() é definida para conter o fluxo principal do seu script. Ela chama a função get_all_contacts para buscar os contatos, e então exporta os dados em formatos JSON, CSV e Excel.
+def main ():
     contacts = get_all_contacts(url, headers, properties)
 
-    # Exporta contatos para um arquivo JSON
+    # Export the dataframe contacts for a JSON file
     print("Exporting the contacts to a JSON file:")
     with open('path_where_you_want_to_save_the_generated_file', 'w') as f:
         json.dump(contacts, f, indent=4)
 
-    # Converte a lista de contatos em um DataFrame do pandas
-    df = pd.json_normalize(contacts) # utilizado para transformar a lista de contatos em um dataframe do pandas
+    # Convert the contact list into a pandas DataFrame
+    df = pd.json_normalize(contacts)
 
-    # df = pd.dataframe (contacts) # cria um dataframe do pandas a partir dos contatos
+    # df = pd.dataframe (contacts) # Create a dataframe of pandas by the contacts
 
-    # Exporta o dataframe contatos para um arquivo CSV
+    # Export the dataframe contacts for a CSV file
     print("Exporting the contacts to a CSV file")
     df.to_csv('path_where_you_want_to_save_the_generated_file', index=False)
 
-    # Exporta o dataframe contatos para um arquivo Excel
+    # Export the dataframe contacts for a Excel file
     print("Exporting the contacts to a Excel file")
     df.to_excel('path_where_you_want_to_save_the_generated_file', index=False)
 
@@ -164,7 +163,8 @@ def main (): # Definicao da Funcao 'main()': A funcao main() é definida para co
     print("Script completed.")
 
     # Add a timer of 5 seconds before it close
-    time.sleep(5) # 'time.sleep(10)' é usado no final da função 'main()' para pausar a execução do script por 10 segundos antes de terminar. Isso dará tempo para o usuário ver a mensagem final antes do terminal fechar.
+    time.sleep(5)
 
-if __name__ == '__main__': # Verificacao 'if __name__ == '__main__':': Esta linha garante que a função main() será executada apenas quando o script for executado diretamente (e não quando ele for importado como um módulo em outro script).
+# The verification of 'if __name__ == '__main__':': It guarantee that the function main () will be started only when the script will be directly executed.
+if __name__ == '__main__': 
     main()
