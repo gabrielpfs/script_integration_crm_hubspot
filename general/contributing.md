@@ -1,160 +1,238 @@
-# Contributing
+# Contributing on Github Projects
 
-We would ❤️ it if you contributed to the project and helped make Application even better. We will make sure that contributing to Amplication is easy, enjoyable, and educational for anyone and everyone. All contributions are welcome, including features, issues, documentation, guides, and more.
+# Passos para Clonar um Repositório do GitHub
 
-## Got a question?
+## Instale o Git (se ainda não o tiver instalado):
 
-You can ask questions, consult with more experienced Application users, and discuss Application-related topics in the our [Discord channel](https:/dataventures/.com/discord).
-
-## Found a bug?
-
-If you find a bug in the source code, you can help us by [submitting an issue](https://github.com/.../.../issues/new?assignees=&labels=type%3A%20bug&template=bug_report.md&title=) to our GitHub Repository. Even better, you can submit a Pull Request with a fix.
-
-## Missing a feature?
-
-You can request a new feature by [submitting an issue](https://github.com/.../amplication/issues/new?assignees=&labels=type%3A%20feature%20request&template=feature_request.md&title=) to our GitHub Repository.
-
-If you'd like to implement a new feature, it's always good to be in touch with us before you invest time and effort, since not all features can be supported.
-
-- For a Major Feature, first open an issue and outline your proposal. This will let us coordinate efforts, prevent duplication of work, and help you craft the change so that it's successfully integrated into the project.
-- Small Features can be crafted and directly [submitted as a Pull Request](#submit-pr).
-
-## What do you need to know to help?
-
-If you want to help out with a code contribution, our project uses the following stack:
-
-### Server-side
-
-- [Python](https://docs.python.org/3/)
-
-### Client-side
-
-- [Python](https://docs.python.org/3/)
-
-If you don't feel ready to make a code contribution yet, no problem! You can also check out the [documentation issues](https://github.com/.../.../labels/type%3A%20docs).
-
-# <a name="submit-pr"></a> How do I make a code contribution?
-
-## Open to community
-
-You can check all the issues that are open for community contributions. Check [here](https://github.com/.../.../issues?q=is%3Aopen+is%3Aissue+label%3A%22open+to+community%22).
-
-## Good first issues
-
-Are you new to open source contribution? Wondering how contributions work in our project? Here's a quick rundown.
-
-Find an issue that you're interested in addressing, or a feature that you'd like to add.
-You can use [this view](https://github.com/.../.../issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) which helps new contributors find easy gateways into our project.
-
-## Step 1: Make a fork
-
-Fork the Amplication repository to your GitHub organization. This means that you'll have a copy of the repository under _your-GitHub-username/repository-name_.
-
-> :accessibility: Un-check "Copy the DEFAULT branch only"
-
-## Step 2: Clone the repository to your local machine
-
-```sh
-git clone -b next https://github.com/{your-GitHub-username}/integration-crm-hubspot.git
+- Para Windows: Baixe e instale o Git a partir do site oficial do Git.
+- Para Mac: Use o Homebrew (brew install git) ou baixe o instalador do site oficial do Git.
+- Para Linux: Use o gerenciador de pacotes da sua distribuição. Por exemplo, no Ubuntu, execute:
 
 ```
-
-## Step 3: Prepare the development environment
-
-Set up and run the development environment on your local machine following the [README](./README.md#Development)
-
-## Step 4: Create a branch
-Create a new branch for your changes.
-In order to keep branch names uniform and easy-to-understand, please use the following conventions for branch naming.
-Generally speaking, it is a good idea to add a group/type prefix to a branch.
-Here is a list of good examples:
-- for docs change : `docs/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. docs/2233-update-contributing-docs
-- for new features : `feat/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. feat/1144-add-plugins
-- for bug fixes : `fix/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. fix/9878-fix-invite-wrong-url
-- for anything else: `chore/{ISSUE_NUMBER}-{CUSTOM_NAME}` for e.g. chore/111-update-ci-url
-
-```sh
-git checkout -b branch-name-here
+sudo apt-get install git
 ```
 
-## Step 5: Make your changes
+## Abra o Terminal:
 
-Update the code with your bug fix or new feature.
+- No Windows, você pode usar o Git Bash (instalado junto com o Git) ou o Prompt de Comando.
+- No Mac ou Linux, abra o Terminal.
 
-## Step 6: Add the changes that are ready to be committed
+## Navegue até o Diretório de Destino:
 
-Stage the changes that are ready to be committed:
-
-```sh
-git add .
-```
-
-## Step 7: Commit the changes (Git)
-
-Commit the changes with a short message. (See below for more details on how we structure our commit messages)
-
-```sh
-git commit -m "<type>(<package>): <subject>"
-```
-
-## Step 8: Push the changes to the remote repository
-
-Push the changes to the remote repository using:
-
-```sh
-git push origin branch-name-here
-```
-
-## Step 9: Create Pull Request
-
-In GitHub, do the following to submit a pull request to the upstream repository:
-
-1.  Give the pull request a title and a short description of the changes made following the template. Include also the issue or bug number associated with your change. Explain the changes that you made, any issues you think exist with the pull request you made, and any questions you have for the maintainer.  <br/> ⚠️ **Make sure your pull request target the `next` branch.**
- 
-  > Pull request title should be in the form of `<type>(<package>): <subject>` as per commit messages.
-Remember, it's okay if your pull request is not perfect (no pull request ever is). The reviewer will be able to help you fix any problems and improve it!
-
-2.  Wait for the pull request to be reviewed by a maintainer.
-
-3.  Make changes to the pull request if the reviewing maintainer recommends them.
-
-Celebrate your success after your pull request is merged :-)
-
-## Git Commit Messages
-
-We structure our commit messages like this:
+Vá para o diretório onde você deseja clonar o repositório. Use o comando cd para mudar de diretório. Por exemplo:
 
 ```
-<type>(<package>): <subject>
+cd /path/to/your/directory
 ```
 
-Example
+## Clonar o Repositório:
+
+Use o comando git clone seguido pelo URL do repositório. Por exemplo, para clonar um repositório chamado integration-crm-hubspot-contacts do GitHub, use:
 
 ```
-fix(server): missing entity on init
+git clone https://github.com/Vinteum-Software/integration-crm-hubspot-contacts.git
 ```
 
-### Types:
+## Verifique se o Repositório foi Clonado:
 
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Changes to the documentation
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc.)
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **perf**: A code change that improves performance
-- **test**: Adding missing or correcting existing tests
-- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+Depois que o clone estiver completo, você verá uma nova pasta com o nome do repositório no diretório de destino. Navegue até essa pasta para começar a trabalhar com o projeto:
 
-### Packages:
+```
+cd integration-crm-hubspot-contacts
+```
 
-- **server**
-- **client**
-- **data-service-gen**
+# Passos para Mudar a Visibilidade de um Repositório no GitHub
 
-## Code of conduct
+## Acesse o GitHub:
 
-Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+- Faça login na sua conta GitHub no site do GitHub.
 
-[Code of Conduct](https://github.com/HubSpot/hubspot-api-python/blob/master/CODE_OF_CONDUCT.md)
+## Navegue até o Repositório:
 
-Our Code of Conduct means that you are responsible for treating everyone on the project with respect and courtesy.
+- Vá até a página do repositório que você deseja tornar público.
+
+## Acesse as Configurações do Repositório:
+
+- Na página do repositório, clique na aba Settings, que está no menu superior à direita.
+
+## Alterar a Visibilidade:
+
+- Role a página de configurações para baixo até encontrar a seção Danger Zone.
+- Na seção Danger Zone, você verá a opção Change repository visibility.
+- Clique no botão Change visibility.
+
+## Confirme a Alteração:
+
+- Uma janela pop-up aparecerá solicitando que você confirme a alteração de visibilidade.
+- Selecione a opção Make public e, em seguida, clique no botão I understand, make this repository public.
+
+## Confirme com sua Senha:
+
+- Você pode ser solicitado a inserir sua senha do GitHub para confirmar a alteração.
+
+
+## Clone o Repositório Existente:
+
+Primeiro, clone o repositório existente da primeira conta do GitHub para o seu computador local usando o comando:
+
+```
+git clone <url_do_repositório>
+```
+
+## Ajuste o Remote do Git:
+
+Navegue para o diretório do seu projeto clonado e ajuste o URL do remote para apontar para a nova conta do GitHub usando o comando:
+
+```
+git remote set-url origin <novo_url_do_repositório>
+```
+
+Substitua <novo_url_do_repositório> pelo URL do novo repositório que você criou na outra conta do GitHub.
+
+## Push para o Novo Repositório:
+
+Por fim, faça o push das suas alterações para o novo repositório usando o comando:
+
+```
+git push -u origin master
+```
+
+Isso vai enviar todos os commits e arquivos do seu repositório local para o novo repositório na outra conta do GitHub.
+
+## Verifique o Diretório Git:
+
+Certifique-se de estar no diretório correto do projeto que foi clonado do GitHub. Você precisa estar dentro do diretório que contém o subdiretório .git. Normalmente, ao clonar um repositório, o Git cria um diretório oculto .git dentro do diretório clonado.
+
+Você pode verificar se está no diretório certo usando o comando:
+
+```
+ls -a
+```
+
+Isso mostrará todos os arquivos e diretórios, incluindo os ocultos, como .git.
+
+## Inicialize o Repositório Git:
+
+Se o diretório atual não for um repositório Git, você precisará inicializá-lo como tal. Se estiver no diretório correto que contém o código do projeto, mas não há um repositório Git ainda, você pode inicializá-lo com o comando:
+
+```
+git init
+```
+
+Isso criará um novo repositório Git local no diretório atual.
+
+## Reverifique o Comando:
+
+Após verificar que está no diretório certo e que é um repositório Git válido, tente novamente configurar o remote com o comando:
+
+```
+git remote set-url origin <novo_url_do_repositório>
+```
+
+Certifique-se de substituir <novo_url_do_repositório> pelo URL correto do novo repositório que você deseja usar.
+
+## Push para o Novo Repositório:
+
+Você precisa fazer o push dos seus commits locais para o novo repositório remoto na outra conta do GitHub. Para fazer isso, use o comando:
+
+```
+git push -u origin main
+```
+
+O -u configura o upstream para a branch main, o que significa que nas próximas vezes que você fizer git push, não precisará especificar o branch e apenas git push será suficiente.
+
+origin é o nome do remote que você configurou anteriormente para apontar para o novo repositório na sua outra conta do GitHub.
+
+main é o nome da branch local que você está empurrando para o repositório remoto. Se sua branch principal for diferente (por exemplo, master), substitua main pelo nome correto.
+
+# Removing a Repository
+
+Para remover um repositório Git remoto (como origin neste caso), você pode usar o comando git remote remove seguido pelo nome do remote que você deseja remover. Aqui está como fazer:
+
+```
+git remote remove origin
+```
+
+Isso remove o remote chamado origin do seu repositório Git local. Depois de executar este comando, o Git não terá mais o remote origin configurado para este repositório.
+
+Lembre-se de que isso apenas remove a referência ao remote do seu repositório local. O repositório remoto no GitHub ou em qualquer outro servidor Git não será afetado por esta ação.
+
+Se você já possui um repositório local com histórico de commits e deseja publicá-lo em um novo repositório no GitHub, siga estes passos para adicionar o novo repositório remoto e fazer o push dos seus arquivos:
+
+## Adicionar o Novo Remote:
+
+Primeiro, adicione o novo remote chamado origin apontando para o URL do novo repositório no GitHub usando o comando:
+
+```
+git remote add origin https://github.com/Vinteum-Software/integration-crm-hubspot-contacts.git
+```
+
+Substitua https://github.com/Vinteum-Software/integration-crm-hubspot-contacts.git pelo URL correto do seu novo repositório.
+
+
+## Fazer o Push dos Arquivos:
+
+Depois de adicionar o remote, você pode fazer o push dos seus arquivos e commits locais para o novo repositório usando o comando:
+
+
+```
+git push -u origin main
+```
+
+- -u configura o upstream para a branch main, o que significa que nas próximas vezes que você fizer git push, não precisará especificar o branch e apenas git push será suficiente.
+- origin é o nome do remote que você acabou de adicionar.
+- main é o nome da branch local que você está empurrando para o repositório remoto. Substitua main pelo nome correto da sua branch principal, se for diferente.
+
+Se você deseja usar um novo repositório no GitHub e origin já está configurado para outro URL, você tem algumas opções:
+
+## Opção 1: Renomear o Remote Existente
+
+Se você deseja mudar o remote atual origin para apontar para um novo URL, você pode usar o comando git remote set-url:
+
+```
+git remote set-url origin https://github.com/Vinteum-Software/integration-crm-hubspot-contacts.git
+```
+
+Isso atualiza o URL do remote origin para apontar para o novo repositório no GitHub.
+
+## Opção 2: Remover o Remote Existente e Adicionar Novamente
+
+Se você deseja remover o remote origin existente e adicionar um novo, você pode fazer da seguinte maneira:
+
+- Remova o remote origin atual:
+
+```
+git remote remove origin
+```
+
+- Em seguida, adicione o novo remote com o mesmo comando que você tentou originalmente:
+
+```
+git remote add origin https://github.com/Vinteum-Software/integration-crm-hubspot-contacts.git
+```
+
+- Agora você pode fazer o push dos seus arquivos para o novo repositório:
+
+```
+git push -u origin main
+```
+
+Certifique-se de ajustar main para o nome correto da sua branch principal se ela for diferente.
+
+## Opção 3: Configurar um Novo Remote com Outro Nome
+
+Se preferir manter o remote origin existente e configurar um novo remote com outro nome (por exemplo, new-origin), você pode fazer assim:
+
+- Adicione um novo remote com um nome diferente (por exemplo, new-origin):
+
+```
+git remote add new-origin https://github.com/Vinteum-Software/integration-crm-hubspot-contacts.git
+```
+
+- Faça o push dos seus arquivos para o novo remote new-origin:
+
+```
+git push -u new-origin main
+```
+
+Escolha a opção que melhor se adequa ao que você precisa fazer com seu repositório Git local e ao novo repositório no GitHub.
