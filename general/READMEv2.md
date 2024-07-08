@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="[https://drive.google.com/file/d/1Az5HHjbJygWJgpLpZh4MPJ6L173-kYUo/view?usp=drive_link](https://github.com/gabrielpsf/integration-crm/blob/main/assets/image.png)"><img src="https://github.com/gabrielpsf/integration-crm/blob/main/assets/image.png" alt="CRM Hubspot" width="200"></a>
+  <a href="https://github.com/Vinteum-Software/integration-crm-hubspot-contacts/blob/main/project_logo.png"><img src="https://github.com/Vinteum-Software/integration-crm-hubspot-contacts/blob/main/project_logo.png" alt="CRM Hubspot" width="80"></a>
   <br>
   CRM Hubspot
   <br>
