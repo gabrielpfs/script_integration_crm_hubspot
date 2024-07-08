@@ -1,65 +1,24 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="python_integration.png" alt="logo" width="140"  height="auto" />
+  <img src="https://github.com/Vinteum-Software/integration-crm-hubspot-contacts/blob/main/project_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
-
   <h3><b>HubSpot Integration</b></h3>
-
 </div>
 
-<!-- TABLE OF CONTENTS -->
-
 # Table of Contents
-
 - [About the Project](#about-project)
   - [Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [Live Demo](#live-demo)
 - [Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [Authors](#authors)
-- [Future Features](#future-features)
-- [Contributing](#contributing)
-- [Show your support](#support)
-- [Acknowledgements](#acknowledgements)
-- [FAQ (OPTIONAL)](#faq)
 - [License](#license)
 
 <!-- PROJECT DESCRIPTION -->
-
 # HubSpot Integration <a name="about-project"></a>
 
 > This project is a Python script that interacts with the HubSpot CRM to fetch contact data, process it, and export it in JSON, CSV, and Excel formats. Additionally, it has functionality to send an email notification using the SMTP protocol.
@@ -105,7 +64,6 @@ After you're finished please remove all the comments and instructions!
 </details>
 
 <!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
 - **Automated_Data_Fetching_from_HubSpot**
