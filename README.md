@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/Vinteum-Software/integration-crm-hubspot-contacts/blob/main/project_logo.png"><img src="https://github.com/Vinteum-Software/integration-crm-hubspot-contacts/blob/main/project_logo.png" alt="CRM Hubspot" width="80"></a>
-  <a href="https://github.com/Vinteum-Software/integration_crm_hubspot_contacts/assets/88781022/081dbf96-11ce-42bc-9c62-8a7d7859d983"><img src="https://github.com/Vinteum-Software/integration_crm_hubspot_contacts/assets/88781022/081dbf96-11ce-42bc-9c62-8a7d7859d983" alt="CRM Hubspot" width="80"></a>
+  <a href="https://github.com/user-attachments/assets/61250cf8-9b95-4770-ba91-07c3bdd87754"><img src="https://github.com/user-attachments/assets/61250cf8-9b95-4770-ba91-07c3bdd87754" alt="logo" width="80"></a>
+  <a href="https://github.com/user-attachments/assets/8188f8ab-f0b5-4c0c-b639-e6d4a0b51128"><img src="https://github.com/user-attachments/assets/8188f8ab-f0b5-4c0c-b639-e6d4a0b51128" alt="hubspot" width="80"></a>
   <br>
   CRM Hubspot
   <br>
